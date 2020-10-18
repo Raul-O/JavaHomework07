@@ -3,12 +3,14 @@ package org.example;
 public class Persoana {
 
     private String name;
+    private String surname;
     private Integer age;
 
 
 
-    public Persoana(String name, Integer age) {
+    public Persoana(String name, String surname, Integer age) {
         this.name = name;
+        this.surname = surname;
         this.age = age;
     }
 
@@ -27,7 +29,15 @@ public class Persoana {
     @Override
     public String toString() {
         return "Persoana ---->" +
-                name +  ", age=" + age +
+                name + " " + surname +  ", age=" + age +
                 "   ";
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Persoana person = (Persoana)o;
+        return name.equals(person.name) && surname.equals(person.surname);
     }
 }

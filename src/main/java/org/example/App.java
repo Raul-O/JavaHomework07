@@ -9,12 +9,14 @@ public class App
     {
 
         SortedSet<Persoana> personTreeSet = new TreeSet<>(new AgeComp());
-        Persoana p1 = new Persoana("George ", 12);
-        Persoana p2 = new Persoana("Andrei", 55);
-        Persoana p3 = new Persoana("Alin", 33);
+        Persoana p1 = new Persoana("George ", "aa", 12);
+        Persoana p2 = new Persoana("Andrei","bb", 55);
+        Persoana p3 = new Persoana("Alin","cc", 33);
+        Persoana p4 = new Persoana("Alin","cc", 33);
         personTreeSet.add(p1);
         personTreeSet.add(p2);
         personTreeSet.add(p3);
+        personTreeSet.add(p4);
 
         for (Persoana persoana : personTreeSet) {
             System.out.println(persoana.toString());
